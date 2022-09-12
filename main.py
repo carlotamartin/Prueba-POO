@@ -7,6 +7,7 @@ class Vehiculo():
 
     def get_ruedas (self):
         return int(self.ruedas)
+
 class Coche(Vehiculo):
     def __init__(self, color, ruedas,velocidad, cilindrada):
         super().__init__(color, ruedas)
@@ -75,8 +76,8 @@ def catalogar(lista):
 
 lista = [c, f, j, h]
 
-#catalogar(lista)
-
+catalogar(lista)
+print('PARTE DOS')
 def catalogar_2 (lista, ruedas):
     j = 0
     for i in lista:
@@ -84,5 +85,6 @@ def catalogar_2 (lista, ruedas):
             j +=1
             print (str(type(i).__name__ )+ ' = '+ str(i) )
     print('Se han encontrado {} vehículos con {} ruedas'.format(j, ruedas))
+
 catalogar_2 (lista, 4)
 
