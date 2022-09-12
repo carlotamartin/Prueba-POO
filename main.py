@@ -51,13 +51,21 @@ class Motocicleta(Bicicleta):
 
 c = Coche("azul", 4, 150, 1200)
 f = Coche ('rojo', 5, 300, 1400)
-print(c,f)
 j= Bicicleta('azul', 2, 20)
-print(j)
 h = Motocicleta('azul', 9, 5, 100, 200)
-print(h)
+
+
+
+#Creamos el método catalogar
+def catalogar(lista):
+    for i in lista:
+        print (str(type(i).__name__ )+ ' = '+ str(i) )
 
 lista = [c, f, j, h]
 
+catalogar(lista)
+
+def catalogar_2 (lista, ruedas):
+    
 
 
