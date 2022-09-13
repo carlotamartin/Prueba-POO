@@ -37,7 +37,7 @@ class Camioneta(Coche):
 class Bicicleta(Vehiculo):
     def __init__(self, color, ruedas, tipo):
         super().__init__( color, ruedas)
-        if self.ruedas > 8:
+        if self.ruedas > 3:
             self.tipo = 'deportivo'
         else:
             self.tipo = 'urbano'
@@ -62,11 +62,6 @@ class Motocicleta(Bicicleta):
         return int(self.ruedas)
 
 
-c = Coche("azul", 4, 150, 1200)
-f = Coche ('rojo', 5, 300, 1400)
-j= Bicicleta('azul', 2, 20)
-h = Motocicleta('azul', 4, 5, 100, 200)
-
 
 
 #Creamos el método catalogar
@@ -74,10 +69,7 @@ def catalogar(lista):
     for i in lista:
         print (str(type(i).__name__ )+ ' = '+ str(i) )
 
-lista = [c, f, j, h]
 
-catalogar(lista)
-print('PARTE DOS')
 def catalogar_2 (lista, ruedas):
     j = 0
     for i in lista:
@@ -86,5 +78,33 @@ def catalogar_2 (lista, ruedas):
             print (str(type(i).__name__ )+ ' = '+ str(i) )
     print('Se han encontrado {} vehículos con {} ruedas'.format(j, ruedas))
 
-catalogar_2 (lista, 4)
+
+def main():
+    #Creamos los distintos vehículos
+    c = Coche("azul", 4, 150, 1200)
+    f = Coche ('rojo', 5, 300, 1400)
+    j= Bicicleta('azul', 2, 20)
+    h = Motocicleta('azul', 4, 5, 100, 200)
+
+    #Creamos la lista de vehículos
+    lista = [c, f, j, h]
+
+    catalogar(lista)
+
+    print ('\n')
+    print('PARTE DOS')
+
+    print ('\n')
+
+    catalogar_2 (lista, 4)
+
+
+if __name__ == '__main__':
+    main()
+
+
+
+
+
+
 
